@@ -1,0 +1,130 @@
+:root {
+  --primary-bg-color: rgb(84, 84, 241);
+}
+
+body {
+  background-color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.search-form {
+  padding: 10px;
+  background-color: var(--primary-bg-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-input,
+.btn-form,
+.load-more {
+  height: 42px;
+  border-color: transparent;
+}
+.search-input {
+  padding: 10px;
+  width: 300px;
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  outline: transparent;
+}
+
+.btn-form {
+  height: 42px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgb(237, 241, 250);
+}
+
+.load-more {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--primary-bg-color);
+  width: 100%;
+}
+
+.load-more.is-hidden {
+  display: none;
+}
+
+.gallery {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 20px;
+
+  padding: 10px;
+  width: 100%;
+}
+
+.photo-card {
+  flex-basis: 450px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .photo-card {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .photo-card {
+    flex-basis: calc((100% - 20px * 1) / 2);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .photo-card {
+    flex-basis: calc((100% - 20px * 2) / 3);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .photo-card {
+    flex-basis: calc((100% - 20px * 3) / 4);
+  }
+}
+
+.info {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-item {
+  margin: 0;
+}
+
+.thumb {
+  overflow: hidden;
+  height: 250px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.info-text-wrapp {
+  display: block;
+}
